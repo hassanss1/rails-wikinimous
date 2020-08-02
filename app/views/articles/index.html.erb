@@ -1,0 +1,10 @@
+<!-- coding for the headers -->
+<%= link_to 'New Article', new_article_path %>
+<!-- coding the body -->
+<!-- remember to install bootstrap so your div will be centered -->
+<div class="container">
+  <% @articles.each do |article| %>
+    <h1><%= link_to article.title, article_path(article) %></h1>
+    <p><%= article.content %></p>
+  <% end %>
+</div>
